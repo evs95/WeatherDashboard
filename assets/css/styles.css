@@ -1,0 +1,33 @@
+body {
+    font-family: 'Fira Sans', sans-serif;
+    color: aliceblue;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+  }
+
+header {
+      background-color: rgb(5, 5, 133);
+      color: aliceblue;
+      text-align: center;
+}
+
+form {
+  flex: 5%;
+  display: block;
+}
+
+main{
+  display: flex;
+}
+
+.container{
+  flex: 95%;
+}
