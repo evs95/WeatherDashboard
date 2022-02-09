@@ -143,4 +143,4 @@ loadSavedCities();
 searchBtn.on("click", onSearchClick);
 
 // Disable right click on the page.
-//document.addEventListener('contextmenu', event => event.preventDefault());
+document.addEventListener('contextmenu', event => event.preventDefault());

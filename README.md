@@ -22,4 +22,4 @@ The following image shows the web application's appearance and functionality:
 
 Below is link for deployed Weather dashboard website.
 
-[Weather dashboard](https://evs95.github.io/CodeQuiz/)
+[Weather dashboard](https://evs95.github.io/WeatherDashboard/)
