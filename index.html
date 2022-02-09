@@ -11,16 +11,16 @@
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 
-<body class="min-vh-100 bg-light">
+<body class="min-vh-100">
   <div class="flex-row align-center justify-center min-100-vh">
-    <header>
+    <header class="bg-gradient-primary p-3">
         <h1>Weather Dashboard</h1>
     </header>
-    <main class="align-center bg-light">
+    <main class="align-center">
       <form id="search-form" class="col-2 form m-3">
         <div class=""><h2 class="text-dark">Search for a City</h2></div>
-        <div class=""><input id="search-input" class="form-input w-100 my-3" type="text" placeholder="Search!"></div>
-        <div class="border-dark border-bottom"><button id="searchBtn" class="btn w-100 btn-info my-3">Search</button></div>
+        <div class=""><input id="search-input" class="form-control w-100 my-3 form-control-lg" type="text" placeholder="Search!"></div>
+        <div class="border-dark border-bottom"><button id="searchBtn" class="btn w-100 btn-primary my-3">Search</button></div>
         <div id="searchedCitiesList"></div>
       </form>
       <div class="col-10 container m-3">

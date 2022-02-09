@@ -1,6 +1,7 @@
 body {
     font-family: 'Fira Sans', sans-serif;
     color: aliceblue;
+    background-color: white;
   }
   
   h1,
@@ -14,7 +15,7 @@ body {
   }
 
 header {
-      background-color: rgb(5, 5, 133);
+      background-color: rgb(29, 78, 151);
       color: aliceblue;
       text-align: center;
 }
@@ -32,6 +33,15 @@ main{
   flex: 95%;
 }
 
+ul{
+  justify-content: space-between;
+}
+
 li{
   display: inline-block;
+  background-color: rgb(29, 65, 102);
+}
+
+.searchedCity{
+  background-color: #babec2c9;
 }
