@@ -11,29 +11,34 @@
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 
-<body>
+<body class="min-vh-100 bg-light">
   <div class="flex-row align-center justify-center min-100-vh">
     <header>
         <h1>Weather Dashboard</h1>
     </header>
     <main class="align-center bg-light">
-      <form id="search-form" class="form m-3">
-        <div class="col-12"><h2 class="text-dark">Search for a City</h2></div>
-        <div class="col-12"><input id="search-input" class="form-input w-100 my-3" type="text" placeholder="Search!"></div>
-        <div class="col-12"><button class="btn w-100 btn-info my-3">Search</button></div>
+      <form id="search-form" class="col-2 form m-3">
+        <div class=""><h2 class="text-dark">Search for a City</h2></div>
+        <div class=""><input id="search-input" class="form-input w-100 my-3" type="text" placeholder="Search!"></div>
+        <div class="border-dark border-bottom"><button id="searchBtn" class="btn w-100 btn-info my-3">Search</button></div>
+        <div id="searchedCitiesList"></div>
       </form>
-      <div class="container m-3">
+      <div class="col-10 container m-3">
         <section class="text-dark">
-          <div>
-            <h3>City</h3>
-            <p>Temp:</p>
-            <p>Wind:</p>
-            <p>Humidity:</p>
-            <p>UV Index:</p>
+          <div class="border border-dark py-3 px-1">
+            <div><label id="city" class="h3">City</label><img id="img"/></div>
+            <p id="temp">Temp:</p>
+            <p id="wind">Wind:</p>
+            <p id="humidity">Humidity:</p>
+            <p id="UVIndex">UV Index:</p>
           </div>
         </section>
-        <section>
-          
+        <section class="my-3">
+          <h3 class="text-dark" >5-Day Forecast</h3>
+          <div id="list">
+            <ul id="forecastList" class="m-0 p-0">
+            </ul>
+          </div>
         </section>
       </div>
     </main>
@@ -42,6 +47,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="assets/js/script.js"></script>
 </body>
 

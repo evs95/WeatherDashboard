@@ -31,3 +31,7 @@ main{
 .container{
   flex: 95%;
 }
+
+li{
+  display: inline-block;
+}
