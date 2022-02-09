@@ -25,7 +25,8 @@ function success (position){
         tempEl.text("Temp: "+data.main.temp+"°F");
         windEl.text("Wind: "+data.wind.speed+" MPH");
         humidityEl.text("Humidity: "+data.main.humidity+" %");
-        UVIndexEl.text("UV Index: 0");
+        UVIndexEl.text(0);
+        UVIndexEl.addClass(getColorForIndex(0));
   });
 }
 
@@ -35,6 +36,10 @@ function fail (fail){
 
 //Get weather data when user searches with city name
 function getWeatherData(city){
+    UVIndexEl.removeClass('bg-success');
+    UVIndexEl.removeClass('bg-warning');
+    UVIndexEl.removeClass('bg-danger');
+
     var url = "https://api.openweathermap.org/data/2.5/weather?q="+city+"&units=imperial&appid=75cb326e22036d2782293ee5a922582b";
     fetch(url)
         .then(function (response1) {
@@ -56,7 +61,8 @@ function getWeatherData(city){
                 humidityEl.text("Humidity: "+data1.main.humidity+" %");
 
                 if(data !=null && data.current != undefined && data.daily != undefined){
-                    UVIndexEl.text("UV Index: "+data.current.uvi);
+                    UVIndexEl.text(data.current.uvi);
+                    UVIndexEl.addClass(getColorForIndex(data.current.uvi));
                     loadFivedayForecast(data.daily);
                 }
                 else{
@@ -78,6 +84,10 @@ function getWeatherData(city){
 
 function showErrorMsg(){
     console.log("Error from API.")
+}
+
+function getColorForIndex(index){
+    return index>7?'bg-danger':index>2?'bg-warning':'bg-success';
 }
 
 function loadFivedayForecast(forecastList){
