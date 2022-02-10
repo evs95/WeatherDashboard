@@ -1,5 +1,5 @@
 body {
-    font-family: 'Fira Sans', sans-serif;
+    font-family: sans-serif;
     color: aliceblue;
     background-color: white;
   }
@@ -10,7 +10,7 @@ body {
   h4,
   h5,
   h6 {
-    font-family: 'Merriweather', serif;
+    font-family: serif;
     font-weight: 700;
   }
 

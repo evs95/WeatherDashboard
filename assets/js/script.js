@@ -25,8 +25,7 @@ function success(position) {
             tempEl.text("Temp: " + data.main.temp + "°F");
             windEl.text("Wind: " + data.wind.speed + " MPH");
             humidityEl.text("Humidity: " + data.main.humidity + " %");
-            UVIndexEl.text(0);
-            UVIndexEl.addClass(getColorForIndex(0));
+            UVIndexEl.text('-');
         });
 }
 
@@ -93,7 +92,7 @@ function getColorForIndex(index) {
 function loadFivedayForecast(forecastList) {
     forecastListEl.empty();
     for (var i = 1; i <= 5; i++) {
-        forecastListEl.append("<li class='col-2 mr-5 py-2 pb-5'><h2>"
+        forecastListEl.append("<li class='col-2 mr-4 mb-2 py-2 pb-5'><h2>"
             + moment.unix(forecastList[i].dt).format("MM/DD/YYYY") + "</h2><div><img src='http://openweathermap.org/img/wn/"
             + forecastList[i].weather[0].icon + ".png'/></div><p>Temp:" + forecastList[i].temp.day + "°F</p><p>Wind: "
             + forecastList[i].wind_speed + "MPH</p><p >Humidity:" + forecastList[i].humidity + "%</p></li>")
